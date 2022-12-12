@@ -189,6 +189,9 @@ BlocklyInterface.injectBlockly = function(options) {
   options['oneBasedIndex'] = false;
   BlocklyInterface.workspace = Blockly.inject('blockly', options);
   BlocklyInterface.workspace.addChangeListener(BlocklyInterface.codeChanged);
+
+  // Mount the workSpace to window, so we can access it outside iframe or in console.
+  window["workSpace"] = BlocklyInterface.workspace;
 };
 
 /**

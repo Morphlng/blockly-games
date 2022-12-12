@@ -194,7 +194,7 @@ def generate_compressed(gameName):
     'java',
     '-jar', 'build/third-party-downloads/closure-compiler.jar',
     '--generate_exports',
-    '--compilation_level', 'ADVANCED_OPTIMIZATIONS',
+    '--compilation_level', 'SIMPLEP_OPTIMIZATIONS', # ADVANCED_OPTIMIZATIONS
     '--dependency_mode=PRUNE',
     '--externs', 'externs/interpreter-externs.js',
     '--externs', 'externs/prettify-externs.js',
